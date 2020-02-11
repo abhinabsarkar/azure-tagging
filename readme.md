@@ -12,6 +12,8 @@ az group create --name abs --location eastus --tags "EmployeeID=12345" "AD ID=ab
 
 Apply built-in policy "Inherit a tag from the resource group" on the Resource Group. It will add or replace the specified tag and value from the parent resource group when any resource is created or updated. Existing resources can be remediated by triggering a remediation task.
 
+> You can also create your own custom policy & add to the list of in-built policies and enforce them on any Resource or Resource Group.
+
 ```bash
 # Create a policy assignment - https://docs.microsoft.com/en-us/azure/governance/policy/assign-policy-azurecli
 az policy assignment create --name <actual_name_of_policy_assignment> --display-name <display_name_of_policy_assignment> --policy <policy_name> --scope <scope_of_policy_assignment> --params <tagname_value> --assign-identity --location <location_vale>
